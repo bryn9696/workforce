@@ -17,8 +17,4 @@ RSpec.describe User, type: :model do
     expect(subject.email).to include("@")
   end
 
-  # it "is not valid without a sufficiently long password" do
-  #   subject.password = "123"
-  #   expect(subject).to_not be_valid
-  # end
 end
