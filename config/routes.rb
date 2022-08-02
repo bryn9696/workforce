@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :organisations
   get 'home/index'
   root 'home#index'
   get "signup", to: "users#new"

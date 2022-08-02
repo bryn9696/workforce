@@ -1,5 +1,5 @@
 <h1>Adnat</h1>
 <% if logged_in? %>
   <h3>Logged in as <%=current_user.name%></h3>
-
 <% end %>
+<%=button_to "Log Out", logout_path, :method => :post, class:"btn btn-outline-secondary"%>

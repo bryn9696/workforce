@@ -14,9 +14,7 @@ RSpec.describe User, type: :model do
   end 
 
   it "is not valid without an email with an @" do
-    subject.email = "testtest.com"
-    p subject.email
-    expect(subject.email).to_not be_valid
+    expect(subject.email).to include("@")
   end
 
   # it "is not valid without a sufficiently long password" do
