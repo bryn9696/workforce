@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   has_secure_password
-  belongs_to :organisation
+  has_one :organisation
   has_many :shifts
 end

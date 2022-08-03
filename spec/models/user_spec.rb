@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
   subject { described_class.new(
     name: 'test_name',
     email: "test@test.com",
-    password: "123456",
+    password: "123456"
   )}
 
   it "is valid with a valid username and password" do

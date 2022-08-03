@@ -10,7 +10,7 @@
 
  <%= form_with(model: @organisation, local: true) do |form| %>
   <div class="field form-group">
-    <%=form.number_field :user_id, id: :user_organisation_id, class:"form-control", value: @organisation.id, type: :hidden%>
+    <%=form.number_field :user_id, id: :user_organisation_id, class:"form-control", value: @organisation.id%>
   </div>
 <% end %>
   <%= button_to "Destroy this organisation", @organisation, method: :delete %>

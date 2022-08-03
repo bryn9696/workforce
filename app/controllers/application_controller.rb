@@ -12,9 +12,5 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def common_organisation
-    # All controllers' actions have queried the DB and set @foo for me...
-    @org = @organisation
-    # ... and all templates expect @bar to bet set.
-  end
+
 end

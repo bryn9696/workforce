@@ -16,7 +16,6 @@
   </thead>
 <div id="shifts">
   <tbody>
-  <%=@organisation.inspect%>
   <% @shifts.each do |shift| %>
     <tr>
       <td><%= shift.full_name %></td>
@@ -25,7 +24,7 @@
       <td><%= "#{shift.finish_time.hour}:#{shift.finish_time.min}" %> </td>
       <td><%= shift.break_length %> </td>
       <td><%= "#{(((shift.finish_time.hour.minute + shift.finish_time.min).to_f - (shift.start_time.hour.minute + shift.start_time.min) - shift.break_length.to_i) / 60).to_f.round(2)}" %> </td>
-      # <td><%= "#{(((shift.finish_time.hour.minute + shift.finish_time.min).to_f - (shift.start_time.hour.minute + shift.start_time.min) - shift.break_length.to_i) / 60).to_f.round(2)}" %> </td>
+      <td><%= @organisation.inspect %> </td>
       <td><%= link_to "Show", shift %></td>
       <td><%= link_to "Edit", edit_shift_path(shift) %></td>
       <td><%= link_to 'Delete', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
