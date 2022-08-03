@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <%= link_to 'Adnat', organisations_path, class:"navbar-brand"%>
+    <%= link_to 'Adnat', root_path, class:"navbar-brand"%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,12 +8,12 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if logged_in? %>
           <li class="nav-item">
-          <%= link_to 'Shifts', shifts_path, class:"nav-link"%>
+            <%= link_to 'Organisations', organisations_path, class:"navbar-brand"%>
           </li>
-
+          
           <li class="nav-item">
-          <%= link_to 'Add Shift', new_shift_path, class:"nav-link"%>
-          </li>    
+            <%=button_to "Log Out", logout_path, method: :delete%>
+          </li>
         <% end %>
       </ul>
     </div>
