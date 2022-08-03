@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+        <% if logged_in? %>
           <li class="nav-item">
           <%= link_to 'Shifts', shifts_path, class:"nav-link"%>
           </li>
@@ -14,7 +14,7 @@
           <li class="nav-item">
           <%= link_to 'Add Shift', new_shift_path, class:"nav-link"%>
           </li>    
-
+        <% end %>
       </ul>
     </div>
   </div>

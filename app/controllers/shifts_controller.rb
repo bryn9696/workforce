@@ -57,6 +57,9 @@ class ShiftsController < ApplicationController
     end
   end
 
+  # def hours_worked(start_time, finish_time, break_length)
+  #   (((finish_time.hour.minute + finish_time.min) - (start_time.hour.minute + start_time.min) - break_length.to_i) / 60).to_f
+  # end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shift
