@@ -1,8 +1,14 @@
 class ShiftsController < ApplicationController
   before_action :set_shift, only: %i[ show edit update destroy ]
+
   # before_action :correct_user, only: [:edit, :update, :destroy]
   attr_accessor :shifts
   # GET /shifts or /shifts.json
+  def filter
+    shift = Shift.find(params['name']['id']) 
+    @shifts = shift.name
+  end  
+    
   def index
     @shifts = Shift.all
   end

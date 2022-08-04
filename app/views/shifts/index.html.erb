@@ -21,7 +21,7 @@
     <% if shift.user == current_user %>
     <tr>
       <td><%= shift.full_name %></td>
-      <td><%= "#{shift.shift_date.mday}/#{shift.shift_date.mon}/#{shift.shift_date.year}" %></td>
+      <td><%= "#{shift.shift_date.mday}/#{shift.shift_date.mon}/#{shift.shift_date.year}"%></td>
       <td><%= "#{shift.start_time.strftime('%H')}:#{shift.start_time.strftime('%M')}" %></td> 
       <td><%= "#{shift.finish_time.strftime('%H')}:#{shift.finish_time.strftime('%M')}" %> </td>
       <td><%= shift.break_length %> </td>
