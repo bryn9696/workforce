@@ -13,17 +13,19 @@
     <tr>
       <th>Name</th>
       <th>Hourly Rate</th>
-      <th>ID</th>
+
       <th> </th>
     </tr>
   </thead>
+  <%= @organisations.inspect %>
+  <%= current_user.inspect %>
 
   <tbody>
     <% @organisations.each do |organisation| %>
       <tr>
           <td><%= organisation.name %></td>
           <td><%= organisation.hourly_rate %> </td>
-          <td><%= organisation.id %></td>
+
           <td><%= link_to "Join", organisation%></td>
           <td><%= link_to "Edit", edit_organisation_path(organisation) %></td>
  
