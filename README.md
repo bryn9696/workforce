@@ -1,25 +1,15 @@
-# README
+# Adnat (Ruby on Rails challenge)
+Bryn Williams
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+First, git clone this repo
+Run bundle install
+run rails db:migrate
 
-Things you may want to cover:
+run *rails s* to view the webapp in *localhost:300*
 
-* Ruby version
+To run tests in the terminal
+run rspec
 
-* System dependencies
+For this challenge I created the *users* MVC myself and used the rails scaffold to generate the *organisation* MVC and *shifts* MVC.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # workforce
