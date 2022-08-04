@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :current_organisation
+  helper_method :current_user, :logged_in?, :current_organisation, :delete_organisation
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  # def signed_in?
-  #   !!current_user
-  # end
+  def delete_organisation
+    @shift = Shift.all
+  end
 
 
 end

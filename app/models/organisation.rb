@@ -1,5 +1,6 @@
 class Organisation < ApplicationRecord
-  has_many :users
+  has_many :users 
+  has_many :shifts 
 
   attr_accessor :organisation 
 
