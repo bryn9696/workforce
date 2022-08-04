@@ -5,9 +5,9 @@ Bryn Williams
 * Run bundle install
 * Run rails db:migrate
 
-* run *rails s* to view the webapp in *localhost:300*
+* Run *rails s* to view the webapp in *localhost:300*
 
-To run tests in the terminal run *rspec*
+* To run tests in the terminal run *rspec*
 
 For this challenge I created the *users* MVC myself and used the rails scaffold to generate the *organisation* MVC and *shifts* MVC.
 
