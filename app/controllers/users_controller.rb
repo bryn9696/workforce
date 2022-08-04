@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # flash[:notice] = "User created."
+      flash[:notice] = "User created."
       redirect_to login_path
     else
       render 'new'
@@ -14,13 +14,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # if !logged_in?
-    #   # redirect_to login_path
-    # else
-    #   edit profile
-    # end
+    @user = User.find_by(id: params[:id])
   end
   
+  def update
+    @user = User.find_by(id: params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "User updated."
+      redirect_to organisations_path
+    else
+      render 'edit'
+    end
+  end
  private
   
   def user_params

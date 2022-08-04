@@ -32,8 +32,9 @@
           <td><%= link_to 'Delete', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-
-<%= link_to "New organisation", new_organisation_path %>
+<% if @organisations.count < 1%>
+  <%= link_to "New organisation", new_organisation_path %>
+<% end %>
 </tbody>
 </table>
 
