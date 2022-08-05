@@ -5,7 +5,7 @@ Bryn Williams
 * Run bundle install
 * Run rails db:migrate
 
-* Run *rails s* to view the webapp in *localhost:300*
+* Run *rails s* to view the webapp in *localhost:3000*
 
 * To run tests in the terminal run *rspec*
 
